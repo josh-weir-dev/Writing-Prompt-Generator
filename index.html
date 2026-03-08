@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soph's Thinking Thing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="flora.png" alt="Flora" class="floating-character" id="flora">
+    <img src="alice.png" alt="Alice" class="floating-character" id="alice">
+    <div class="container">
+        <h1>Soph's Thinking Thing</h1>
+
+        <!--Prompt Builder Section-->
+        <section id="prompt-builder">
+            <h2>Prompt Builder</h2>
+
+            <div class="inputs">
+
+                <label for="genre">Genre</label>
+                <select id="genre">
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Mystery">Mystery</option>
+                </select>
+
+                <label for="setting">Setting:</label>
+                <select id="setting">
+                    <!-- Handle Setting Population Elsewhere-->
+                </select>
+            </div>
+
+            <button id="generatePrompt">🌸 Generate Prompt</button>
+
+            <div class="random-buttons">
+                <button id="randomCharacter">🎲 Randomize Character</button>
+                <button id="randomConflict">🎲 Randomize Conflict</button>
+            </div>
+
+            <div id="promptOutput" class="prompt-output"></div>
+
+            <div class="prompt-actions">
+                <button id="savePrompt">Save Prompt</button>
+                <button id="copyPrompt">Copy Prompt</button>
+            </div>
+
+            <h3>Saved Prompts</h3>
+            <ul id="savedPrompts"></ul>
+        </section>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
