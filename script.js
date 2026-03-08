@@ -5,6 +5,8 @@ import { conflicts } from "./data/conflicts.js";
 let currentStreak = parseInt(localStorage.getItem("currentStreak")) || 0;
 let lastPromptDate = localStorage.getItem("lastPromptDate");
 
+const streakSound = new Audio("confetti.mp3");
+
 const streakDisplay = document.createElement("div");
 streakDisplay.id = "streakDisplay";
 streakDisplay.style.fontWeight = "bold";
@@ -114,7 +116,10 @@ function updateStreak() {
 
     displayStreak();
 
-    if (streakIncreased) triggerConfetti();
+    if (streakIncreased){
+        triggerConfetti();
+        streakSound.play();
+    } 
 }
 
 displayStreak();
